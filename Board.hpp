@@ -17,11 +17,13 @@ class Board {
 
     // operator for putting soldiers on the game-board during initialization.
     Soldier*& operator[](std::pair<int,int> location){
-      board.get(location.)
+      return board.at(location.first).at(location.second);
     }
     
     // operator for reading which soldiers are on the game-board.
-    Soldier* operator[](std::pair<int,int> location) const;
+    Soldier* operator[](std::pair<int,int> location) const{
+      return board.at(location.first).at(location.second);
+    }
     
     // The function "move" tries to move the soldier of player "player"
     //     from the "source" location to the "target" location,
