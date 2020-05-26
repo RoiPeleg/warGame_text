@@ -1,9 +1,10 @@
+#pragma once
 #include <string>
 #include <vector>
 #include <stdexcept>
 #include "Soldier.hpp"
 
-
+using namespace Soldiers;
 namespace WarGame {
 
 class Board {

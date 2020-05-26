@@ -3,6 +3,7 @@
 
 class ParamedicCommander : public Paramedic {
     public:
-    ParamedicCommander():Paramedic(200){}
+    ParamedicCommander(int playerid):Paramedic(200,playerid){}
     void heal();
-}
+    virtual void move(int d);
+};

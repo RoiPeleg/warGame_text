@@ -3,6 +3,7 @@
 
 class SniperCommander : public Sniper {
     public:
-    SniperCommander():Sniper(120,100){}
+    SniperCommander(int playerid):Sniper(playerid,120,100,){}
+    virtual void move(int d);
     void shoot();
-}
+};
