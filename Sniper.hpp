@@ -2,10 +2,11 @@
 
 #include "Soldier.hpp"
 
-class Sniper : public Soldier {
+class Sniper : public Soldiers:: Soldier {
     public:
-    Sniper(int playerId,int health=100,int damage=50):Soldier(health,playerId){damage=damage;}
+    Sniper(int playerid,int health=100,int damage=50):Soldier(playerid,health){damage=damage;}
     virtual void shoot();
+    virtual void move (int d);
     private:
     int damage;
 };

@@ -1,5 +1,4 @@
 #pragma once
-#include "Board.hpp"
 namespace Soldiers{
     class Soldier{
         private:
@@ -9,5 +8,6 @@ namespace Soldiers{
         public:
             Soldier(int playerid,int health):health(health),inihealth(health),playerid(playerid){}
             virtual void move(int)=0;
+            virtual ~Soldier(){}
     };
 }

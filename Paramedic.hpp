@@ -1,8 +1,7 @@
 #include "Soldier.hpp"
-
-class Paramedic : public Soldier{
+class Paramedic : public Soldiers::Soldier{
     public:
-    Paramedic(int health=100,int playerid):Soldier(health,playerid){}
+    Paramedic(int playerid,int health=100):Soldier(playerid,health){}
     virtual void move(int d);
     private:
     void heal();

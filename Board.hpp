@@ -13,11 +13,12 @@ class Board {
   public:
     enum MoveDIR { Up, Down, Right, Left };
     
-    Board(uint numRows, uint numCols) : 
-      board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
+    Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
 
     // operator for putting soldiers on the game-board during initialization.
-    Soldier*& operator[](std::pair<int,int> location);
+    Soldier*& operator[](std::pair<int,int> location){
+      board.get(location.)
+    }
     
     // operator for reading which soldiers are on the game-board.
     Soldier* operator[](std::pair<int,int> location) const;
