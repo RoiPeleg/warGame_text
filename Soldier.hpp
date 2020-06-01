@@ -7,7 +7,10 @@ namespace Soldiers{
             int playerid;
         public:
             Soldier(int playerid,int health):health(health),inihealth(health),playerid(playerid){}
-            virtual void move(int)=0;
+            virtual void move(std::pair<int,int> d)=0;
+            int playerId(){
+                return playerid;
+            }
             virtual ~Soldier(){}
     };
 }
