@@ -28,6 +28,8 @@ void Board::move(uint player_number, std::pair<int,int> source, MoveDIR directio
     if(c==nullptr)throw new std::runtime_error("No soldier at this location");
     if(c->playerId()!=player_number)throw new std::runtime_error("Not your soldier");
     c->move(target);
+    board.at(target.first).at(target.second) = c;
+    board.at(source.first).at(source.second) = nullptr;
 }
 bool Board::has_soldiers(uint player_number) const{
     bool r =false;

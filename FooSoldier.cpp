@@ -1,3 +1,5 @@
 #include "FootSoldier.hpp"
 void FootSoldier::shoot(){}
-void FootSoldier::move(int d){}
+void FootSoldier::move(std::pair<int,int> d){
+    
+}

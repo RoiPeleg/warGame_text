@@ -1,7 +1,6 @@
 #pragma once
 #include "FootSoldier.hpp"
 
-//using namespace std;
 
 class FootCommander : public FootSoldier {
     public:
