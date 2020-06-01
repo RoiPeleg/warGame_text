@@ -10,10 +10,11 @@ namespace WarGame {
 class Board {
   private:
     std::vector<std::vector<Soldier*>> board;
+    uint rows,cols;
   public:
     enum MoveDIR { Up, Down, Right, Left };
     
-    Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
+    Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)),rows(numRows),cols(numCols) {}
 
     // operator for putting soldiers on the game-board during initialization.
     Soldier*& operator[](std::pair<int,int> location){
