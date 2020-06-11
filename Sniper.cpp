@@ -1,3 +1,10 @@
 #include "Sniper.hpp"
-void Sniper::shoot(){}
-void Sniper::move(std::pair<int,int> d){}
+
+bool Sniper :: action (Soldier& s){
+    s.setHP(-50);
+    return s.isAlive();
+}
+
+void Sniper :: fullHeal(){
+    this->hp = 100;
+}

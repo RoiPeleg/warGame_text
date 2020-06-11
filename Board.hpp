@@ -4,7 +4,6 @@
 #include <stdexcept>
 #include "Soldier.hpp"
 
-using namespace Soldiers;
 namespace WarGame {
 
 class Board {
@@ -17,14 +16,10 @@ class Board {
     Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)),rows(numRows),cols(numCols) {}
 
     // operator for putting soldiers on the game-board during initialization.
-    Soldier*& operator[](std::pair<int,int> location){
-      return board.at(location.first).at(location.second);
-    }
+    Soldier*& operator[](std::pair<int,int> location);
     
     // operator for reading which soldiers are on the game-board.
-    Soldier* operator[](std::pair<int,int> location) const{
-      return board.at(location.first).at(location.second);
-    }
+    Soldier* operator[](std::pair<int,int> location) const;
     
     // The function "move" tries to move the soldier of player "player"
     //     from the "source" location to the "target" location,
@@ -46,6 +41,9 @@ class Board {
     {
       board.clear();
     }
+
+    Soldier &soldierToAttack (int x, int y, SoldierType st, int id);
+    bool legalLocation(std::pair<int,int> location) const;
 };
 
 }

@@ -1,4 +1,10 @@
 #include "FootCommander.hpp"
-void FootCommander::shoot(){}
-void FootCommander::move(std::pair<int,int> d){}
 
+bool FootCommander :: action (Soldier& s){
+    s.setHP(-20);
+    return s.isAlive();
+}
+
+void FootCommander :: fullHeal(){
+    this->hp = 150;
+}

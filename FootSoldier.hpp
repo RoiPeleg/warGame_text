@@ -1,12 +1,15 @@
 #pragma once
 #include "Soldier.hpp"
 
-class FootSoldier : public Soldiers:: Soldier {
+
+class FootSoldier : public Soldier {
     public:
-    FootSoldier(int playerid,int health=100,int damage=10):Soldier(playerid,health){damage=damage;}
-    virtual void shoot();
-    virtual void move(std::pair<int,int> d);
-    private:
-    int damage;
+    explicit FootSoldier(int playerid) : Soldier (playerid){
+        st = SoldierType :: footSoldier;
+        hp = 100;
+        power = 10;
+    }
     
+    bool action (Soldier& s) override;
+    void fullHeal() override;
 };

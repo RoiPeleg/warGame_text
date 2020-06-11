@@ -1,4 +1,10 @@
 #include "Paramedic.hpp"
 
-void Paramedic :: heal(){}
-void Paramedic :: move (std::pair<int,int> d){}
+bool Paramedic :: action (Soldier& s){
+    s.fullHeal();
+    return true;
+}
+
+void Paramedic :: fullHeal(){
+    this->hp = 100;
+}
